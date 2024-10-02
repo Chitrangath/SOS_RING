@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Ring for Women's Safety</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <h1 class="team-name">indenTors</h1>
+            <img src="c:\Users\HP\Desktop\SIH\indentors logo.jpeg" alt="indenTors Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#register" id="registerLink">Register</a></li>
+                <li><a href="#login" id="loginLink">Login</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Registration Section -->
+        <section id="register" class="auth-section">
+            <h3>Register</h3>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <label for="emergencyContact">Emergency Contact Name</label>
+                    <input type="text" id="emergencyContactName" name="emergencyContactName" placeholder="Emergency Contact Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="emergencyContactNumber">Emergency Contact Number</label>
+                    <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" placeholder="Emergency Contact Number" required>
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="auth-section">
+            <h3>Login</h3>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </section>
+
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="product-title">
+                <h2>SOS Ring for Women's Safety</h2>
+            </div>
+            <div class="ring-image">
+                <img src="c:\Users\HP\Desktop\SIH\ring imgs\animation ring.jpeg" alt="SOS Ring Image">
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section (Visible only after login) -->
+        <section class="emergency-contact" id="emergencyContactSection" style="display:none;">
+            <h3>Your Emergency Contacts</h3>
+            <div class="contact-list">
+                <p><strong>Name:</strong> <span id="displayFullName"></span></p>
+                <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+                <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+                <p><strong>Emergency Contact:</strong> <span id="displayEmergencyContactName"></span></p>
+                <p><strong>Emergency Number:</strong> <span id="displayEmergencyContactNumber"></span></p>
+            </div>
+        </section>
+
+        <!-- Existing Emergency Contact Form -->
+        <section class="emergency-contact" id="addEmergencyContactSection" style="display:none;">
+            <h3>Add Emergency Contact Details</h3>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" name="contactName" placeholder="Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="contactNumber">Number</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" placeholder="Contact Number" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <!-- Existing Contact List Section -->
+        <section class="contact-list-section" id="savedContactsSection" style="display:none;">
+            <h3>Saved Emergency Contacts</h3>
+            <div class="dropdown">
+                <button class="dropdown-btn">Show Emergency Contacts</button>
+                <div class="dropdown-content" id="contactList"></div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <h3>How the Ring Works</h3>
+            <img class="working" src="c:\Users\HP\Downloads\how it works.png" alt="how it works">
+            <p>
+                The SOS Ring is designed for women’s safety. When the hidden button is pressed, it sends real-time location alerts to your emergency contacts and the nearest authorities. 
+                The live location is tracked and shared instantly, ensuring quick response during emergencies.
+            </p>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="Blogs"><h3>Blogs</h3></div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="#" onclick="openBlog(1)">How the SOS Ring is Transforming Women’s Safety</a>
+                </div>
+                <div class="blog-item">
+                    <a href="#" onclick="openBlog(2)">5 Essential Tools for Women’s Safety</a>
+                </div>
+                <div class="blog-item">
+                    <a href="#" onclick="openBlog(3)">Why Real-Time Location Sharing is Key in Emergencies</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 indenTors. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
